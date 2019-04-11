@@ -1,0 +1,30 @@
+The orthography is a completely phonetic LTR latin-based alphabet with digraphs.
+
+This page contains special IPA Characters. Proper rendering support is needed.
+
+List of phonemes and their representations:
+  Vowels:       Consonants:
+    a   a         m   m
+    aa  ɑ         n   n
+    e   ɛ/ə       ni  ɲ
+    ee  e         ng  ŋ
+    ae  ɛː        p   p
+    oe  œ         b   b
+    eu  ø         t   t
+    i   i/j       d   d
+    u   u/w       k   k
+    y   y/ɥ       g   g
+    o   ɔ         f   f
+    oo  o         v   v
+    ê   ɛ̃         s   s
+    û   œ̃         z   z
+    â   ɑ̃         c   ʃ
+    ô   ɔ̃         j   ʒ
+                  r   ʁ
+                  l   l
+
+Examples:
+  Marseillaise      Marseiaez/Marseiez
+  Gloire            Gluar
+  substantifique moelle
+                    sybstantifik mual
