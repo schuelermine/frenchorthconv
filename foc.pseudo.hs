@@ -1,19 +1,18 @@
-key <- readKey <$> readFile "key.data"                -- finds key for respelling
-dat <- readCache <$> readFile "cache.cache"           -- reads list of known words ("index")
-rarg <- getArgs                                       -- gets list of arguments ("args")
-let args  = safeTail rarg                             -- extracts tail of *args (-list) ("files")
-let argup = safeHead rarg                             -- extracts first argument (first element of *args)
-let files = mapM readFileSafe args                    -- reads files
-let holes = checkUsing dat <$> files                  -- looks for unknown words
-newdat <- scrapeUsing holes key                       -- scrapes for pronounciations, spells them
-let dat2 = mergeCache dat newdat argup                -- combines new index with old index
-writeFile "cache.cache" dat2                          -- saves new index
-let result = safeConvUsing dat2 <$> files             -- converts file contents using new index ("results")
-let conv  = map fst result                            -- extracts the converted files from the *results ("converted")
-let errs  = map snd result                            -- extracts the errors from the *results
-mapM_ (uncurry writeCopySafe) <$> zip args conv       -- writes *converted to new files
-putStrLn . customshow $ zip args errs                 -- prints errors
-
+main = do   orthKey        <- parseMapTxt <$> readFile "../dat/key"
+            lexicon        <- parseMapTxt <$> readFile "../dat/lex"
+            argList        <- getArgs
+            let fileList    = safeTail argList
+            let mergeMode   = safeHead argList
+            fileTexts      <- mapM readFileSafe fileList
+            let lexHoles    = checkLexForHoles lexicon <$> fileTexts
+            lexicon'       <- buildLexicon orthKey <$> scrapeFor lexHoles
+            let newLex      = mergeLex mergeMode lexicon lexicon'
+            writeFile "../dat/lex" $ encode newLex
+            let results     = safeConvert newLex <$> fileTexts
+            let converted   = fst <$> results
+            let errors      = snd <$> results
+            mapM_ (uncurry writeCopySafe) <$> zip fileList converted
+            putStrLn . formatErrors $ zip fileList errors
 
 {-
 
