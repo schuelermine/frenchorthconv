@@ -1,4 +1,4 @@
-# frenchorthconv
+# frenchorthconv (not even remotely finished)
 An automatic converter from traditional french orthography to a new and improved orthography
 
 
