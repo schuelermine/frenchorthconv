@@ -6,9 +6,9 @@ List of phonemes and their representations:
   Vowels:       Consonants:
     a   a         m   m
     aa  ɑ         n   n
-    e   ɛ/ə       ni  ɲ
+    e   ɛ/ə       nj  ɲ
     ee  e         ng  ŋ
-    ae  ɛː        p   p
+    ae  ɛ/ɛː      p   p
     oe  œ         b   b
     eu  ø         t   t
     i   i/j       d   d
@@ -24,7 +24,18 @@ List of phonemes and their representations:
                   l   l
 
 Examples:
-  Marseillaise      Marseiaez/Marseiez
+  Marseillaise    f Marseiaes / Marseies
+                  m Marseiae  / Marseie
   Gloire            Gluar
   substantifique moelle
                     sybstantifik mual
+                    
+The Marseillaise in this orthography:
+
+Alôz âfâ de la patri
+Le jur de gluar eet arivee
+Kôntre nu de la tirani
+Leetâdar sâglât ee levee
+Eetêndeevu dâ le kâpanj
+Myjir se feeros solda
+Eegorjee voo fis, voo kôpanj
